@@ -1,0 +1,26 @@
+{
+    "apps": [
+        {
+            "name"           : "Favespot-server",
+            "script"         : "./server.js",
+            "time"           : true,
+            "log-date-format": "YYYY-MM-DDTHH:MM:SSZ",
+            
+            "env": {
+                "JWT_KEY": "favespot-key"
+            },
+            "env_develop": {
+                "NODE_ENV"     : "develop",
+                "PORT"         : 4000
+            },
+            "env_production"  : {
+                "NODE_ENV"          :   "production",
+                "PORT"              :   3000
+            },
+            "env_test"       : {
+                "NODE_ENV"     : "test",
+                "PORT"         : 5000
+            }
+        }
+    ]
+}
